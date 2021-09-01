@@ -7,9 +7,9 @@ package thread;
  * @Desc volatile 无法保证并发计算安全，解决方法：increse 加上 synchronized 修饰
  */
 public class VolatileTest_Unsafe {
-    private static volatile int vol = 0;
+    private static int vol = 0;
 
-    public static void increse() {
+    public static synchronized void increse() {
         vol++;
     }
 
