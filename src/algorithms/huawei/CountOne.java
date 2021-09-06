@@ -17,6 +17,9 @@ public class CountOne {
                 count++;
             }
             input >>= 1;
+            // 方法2：
+//            input &=(input -1);
+//            count++;
         }
         System.out.println(count);
     }
