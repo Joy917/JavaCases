@@ -1,6 +1,7 @@
 package algorithms.huawei;
 
 import java.util.Scanner;
+import java.util.TreeSet;
 
 /**
  * @Author Joy
@@ -16,8 +17,15 @@ import java.util.Scanner;
 public class RadomNumber {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        while(scan.hasNext()){
-            int in = scan.nextInt();
+        while (scan.hasNextInt()) {
+            TreeSet<Integer> set = new TreeSet();
+            int num = scan.nextInt();
+            for (int i = 0; i < num; i++) {
+                set.add(scan.nextInt());
+            }
+            while (!set.isEmpty()) {
+                System.out.println(set.pollFirst());
+            }
         }
     }
 }
