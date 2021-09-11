@@ -1,4 +1,4 @@
-package algorithms;
+package algorithms.normal;
 
 import algorithms.model.BTNode;
 
